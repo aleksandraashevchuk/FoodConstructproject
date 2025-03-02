@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Собрать ланч</title>
+   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Lobster:wght@400;700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="mycss2.css">
+</head>
+<body>
+	<div class="page">
+	    <header>
+		    <h1>Food Construct</h1>
+		    <nav class="menu">
+				<a href="index.html">О нас</a> 
+				<a id="2" href="" class="active">Собрать ланч</a>
+				<a id="3" href="">Заказы</a>
+				<a id="4" href="#foot">Контакты</a>
+		    </nav>
+	    </header>
+	    <main>
+		    <section id="Sups">
+			    <h2>Выберите суп</h2>
+			    <div class="Dish">
+				    <div class="Dishes">
+					    <img id="1sup" src="picture/soups/gazpacho.jpg" alt="Гаспачо">
+					    <p class="price">195₽</p>
+					    <p class="name">Гаспачо</p>
+					    <p class="size">350г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="2sup" src="picture/soups/mushroom_soup.jpg" alt="Грибной суп">
+					    <p class="price">185₽</p>
+					    <p class="name">Грибной суп-пюре</p>
+					    <p class="size">330г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="3sup" src="picture/soups/norwegian_soup.jpg" alt="Норвежский суп">
+					    <p class="price">270₽</p>
+					    <p class="name">Норвежский суп</p>
+					    <p class="size">330г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+			    </div>
+		    </section>
+
+		    <section id="maindishes">
+			    <h2>Выберите главное блюдо</h2>
+			    <div class="Dish">
+				    <div class="Dishes">
+					    <img id="1dish" src="picture/main_course/potato.jpg" alt="Жаренная картошка с грибами">
+					    <p class="price">150₽</p>
+					    <p class="name">Жаренная картошка с грибами</p>
+					    <p class="size">250г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="2dish" src="picture/main_course/lasagna.jpg" alt="Лазанья">
+					    <p class="price">385₽</p>
+					    <p class="name">Лазанья</p>
+					    <p class="size">310г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="3dish" src="picture/main_course/chicken.jpg" alt="Котлеты из курицы с картофельным пюре">
+					    <p class="price">225₽</p>
+					    <p class="name">Котлеты из курицы с картофельным пюре</p>
+					    <p class="size">280г</p>
+					    <button class="first">Добавить</button>
+				    </div>
+			    </div>
+		    </section>
+
+		    <section id="Juices">
+			    <h2>Выберите напиток</h2>
+			    <div class="Dish">
+				    <div class="Dishes">
+					    <img id="1juice" src="picture/beverages/orangejuice.jpg" alt="Апельсиновый сок">
+					    <p class="price">120₽</p>
+					    <p class="name">Апельсиновый сок</p>
+					    <p class="size">300мл</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="2juice" src="picture/beverages/applejuice.jpg" alt="Яблочный сок">
+					    <p class="price">90₽</p>
+					    <p class="name">Яблочный сок</p>
+					    <p class="size">300мл</p>
+					    <button class="first">Добавить</button>
+				    </div>
+				    <div class="Dishes">
+					    <img id="3juice" src="picture/beverages/carrotjuice.jpg" alt="Морковный сок">
+					    <p class="price">110₽</p>
+					    <p class="name">Морковный сок</p>
+					    <p class="size">300мл</p>
+					    <button class="first">Добавить</button>
+				    </div>
+			    </div>
+		    </section>
+	    </main>
+		<section id="forma">
+			<h2 id="form">Сделайте заказ</h2>
+			<form action="https://httpbin.org/post" method="POST">
+			<fieldset id="Zakaz">
+				<legend>Ваш заказ</legend>
+				<label for="soup">Суп</label>
+				<select id="soup" name="soup" required>
+					<option value="" disabled selected>--Выберите суп--</option>
+					<option value="gazpacho">Гаспачо</option>
+					<option value="mushsoup">Грибной суп-пюре</option>
+					<option value="norwegsoup">Норвежский суп</option>
+				</select>
+				
+				<label for="maindish">Главное блюдо</label>
+				<select id="maindish" name="maindish" required>
+					<option value="" disabled selected>--Выберите главное блюдо--</option>
+					<option value="potato">Жаренная картошка с грибами</option>
+					<option value="lasagna">Лазанья</option>
+					<option value="chicken">Котлеты из курицы с картофельным пюре</option>
+				</select>
+
+				<label for="juice">Напиток</label>
+				<select id="juice" name="juice" required>
+					<option value="" disabled selected>--Выберите напиток--</option>
+					<option value="orange">Апельсиновый сок</option>
+					<option value="apple">Яблочный сок</option>
+					<option value="carrot">Морковный сок</option>
+				</select>
+
+				<label for="comment">Комментарии к заказу</label>
+				<textarea id="comment" name="comment" rows="8" cols="30"></textarea>
+			</fieldset>
+
+			<fieldset id="Data">
+				<legend>Ваши данные</legend>
+
+				<label for="name">Имя</label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required>
+
+				<div class="check">
+				<input type="checkbox" id="checkboxx" name="checkboxx" checked>
+				<label id="checkboxx">Получать информацию о скидках и акциях</label>
+                </div>
+
+				<label for="number">Номер телефона</label>
+				<input type="tel" id="number" name="number" required>
+				
+				<label for="address">Адрес доставки</label>
+				<input type="text" id="address" name="address" required>
+				<p class="text">Доставка осуществляется только по Москве</p>
+
+				<fieldset id="delivery">
+					<legend id="twotwo">Время доставки:</legend>
+					<div class="rad">
+				    <input type="radio" id="fast" name="delivery" required>
+					<label for="fast">Как можно скорее</label>
+					</div>
+
+					<div class="rad">
+					<input type="radio" id="totime" name="delivery" required>
+					<label for="totime">К указанному времени</label>
+				    </div>
+
+                    <label id="del" for="delivery">Укажите время доставки</label>
+					<input type="time" id="delivery" name="delivery" min="07:00" max="23:00" step="300">
+				</fieldset>
+				<p class="textt">Доступное время доставки с 7:00 до 23:00</p>
+				<button class="two" type="reset">Сбросить</button>
+				<button class="two" type="submit">Отправить</button>
+			</fieldset>
+			</form>
+		</section>
+	    <footer id="foot">
+	    <p>Позвонить нам: <a id="number" href="+7-000-000-00-00">+7-000-000-00-00</a> </p>
+        </footer>
+	</div>
+</body>
+</html>
